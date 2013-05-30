@@ -36,6 +36,9 @@ execute "rm -rf /var/tmp/php*" do
   action :run
 end
 
+puts node.class.name
+puts node.inspect
+
 execute "rm -rf #{node.travis_build_environment.home}/*.iso" do
   action :run
 end
